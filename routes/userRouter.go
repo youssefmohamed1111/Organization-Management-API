@@ -6,10 +6,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 )
+
 // Change into ORGANIZATION
 func UserRoutes(incomingRoutes *gin.Engine){
 	incomingRoutes.Use(middleware.Authenticate())
-	incomingRoutes.POST("users/",controller.GeUsers())
-	incomingRoutes.POST("users/:user_id,controller.GetUser())
+	incomingRoutes.POST("users/",controller.GetUsers())
+	incomingRoutes.POST("users/:user_id,controller.GetUser()")
 
 }
